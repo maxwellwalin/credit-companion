@@ -3,14 +3,22 @@ import Link from "./Link";
 
 export default function Header() {
     return (
-        <Container component="header" maxWidth={false} sx={{boxShadow: "0.4px 0.8px 0.8px hsl(0deg 0% 0% / 0.49)"}}>
+        <Container component="header" maxWidth={false} sx={{ boxShadow: "1px 0.3px 3px" }}>
             <Box py={3} display="flex" justifyContent="space-between">
                 <Typography component="h1" variant="h4">
                     Credit Companion
                 </Typography>
-                <Button variant="contained" component={Link} noLinkStyle href="/">
-                    Go to the main page
-                </Button>
+                <Box display={'grid'} gridTemplateColumns={'auto auto auto'} justifyItems={'center'} gap={2}>
+                    <Button variant="contained" component={Link} noLinkStyle href="/quiz">
+                        Take the credit quiz
+                    </Button>
+                    <Button variant="outlined" component={Link} noLinkStyle href="/">
+                        Home
+                    </Button>
+                    <Button variant="outlined" component={Link} noLinkStyle href="/account">
+                        Account
+                    </Button>
+                </Box>
             </Box>
         </Container>
     );
