@@ -6,20 +6,21 @@ import Button from '@mui/material/Button';
 import ProTip from '../src/ProTip';
 import Link from '../src/Link';
 import Copyright from '../src/Copyright';
+import Header from '../src/Header';
 
-export default function About() {
+export default function Quiz() {
   return (
-    <Container maxWidth="sm">
+    <>
+    <Header />
+    <Container>
       <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Next.js example
+        <Typography variant="h4" component="h2" gutterBottom align='center'>
+          Credit Quiz
         </Typography>
-        <Button variant="contained" component={Link} noLinkStyle href="/">
-          Go to the main page
-        </Button>
         <ProTip />
         <Copyright />
       </Box>
     </Container>
+    </>
   );
 }
