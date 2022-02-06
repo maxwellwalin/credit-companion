@@ -15,8 +15,8 @@ export default function Header() {
                     <Button variant="outlined" component={Link} noLinkStyle href="/">
                         Home
                     </Button>
-                    <Button variant="outlined" component={Link} noLinkStyle href="/account">
-                        Account
+                    <Button variant="outlined" component={Link} noLinkStyle href="/login">
+                        Login
                     </Button>
                 </Box>
             </Box>
