@@ -8,13 +8,13 @@ import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Header from '../src/Header';
 
-export default function About() {
+export default function Quiz() {
   return (
     <>
     <Header />
     <Container>
       <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
+        <Typography variant="h4" component="h2" gutterBottom align='center'>
           Credit Quiz
         </Typography>
         <ProTip />
