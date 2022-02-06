@@ -1,21 +1,23 @@
 import { Box, Container, Typography } from "@mui/material";
-import Copyright from "../src/Copyright";
+import Footer from "../src/Footer";
 import Header from "../src/Header";
-import ProTip from "../src/ProTip";
 
 export default function VerifyEmail() {
   return (
-    <>
-    <Header />
-    <Container>
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h2" gutterBottom align='center'>
-          Please verify your email address. A link has been sent to your inbox.
-        </Typography>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
-    </>
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh',
+    }}>
+      <Header />
+      <Container component="main">
+        <Box my={4}>
+          <Typography variant="h4" component="h2" gutterBottom align='center'>
+            An email has been sent to your inbox. Please click the link to verify your email address.
+          </Typography>
+        </Box>
+      </Container>
+      <Footer />
+    </Box>
   );
 }
