@@ -15,7 +15,7 @@ export default function SignUp({setSignin}) {
               Your Full Name
             </label>
             <input
-              type="email"
+              type="text"
               className="form-control mb-0"
               id="exampleInputEmail1"
               placeholder="Your Full Name"
