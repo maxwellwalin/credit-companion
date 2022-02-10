@@ -10,13 +10,18 @@
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.8",
+    "@apollo/link-error": "^2.0.0-beta.3",
     "@emotion/cache": "latest",
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "apollo-upload-client": "^17.0.0",
+    "graphql-tag": "^2.12.6",
     "next": "latest",
+    "next-with-apollo": "^5.2.1",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
