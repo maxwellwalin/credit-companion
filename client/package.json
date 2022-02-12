@@ -19,6 +19,7 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "apollo-upload-client": "^17.0.0",
+    "graphql": "^16.3.0",
     "graphql-tag": "^2.12.6",
     "next": "latest",
     "next-with-apollo": "^5.2.1",
