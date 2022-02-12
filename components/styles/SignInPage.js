@@ -463,6 +463,7 @@ const SignInPage = styled.section`
   float: right !important;
 }
 .sign-info {
+  font-size: 14px;
   border-top: 1px solid #f1f1f1;
   margin-top: 1.875rem;
   padding-top: 1.25rem;
