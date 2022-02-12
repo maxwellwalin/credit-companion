@@ -4,9 +4,8 @@ import SignUp from "./SignUp";
 import { SignInPage } from "./styles/SignInPage";
 
 export default function Login({ signin, setSignin }) {
-  
   return (
-    <SignInPage className="wrapper">
+    <SignInPage>
       <section className="sign-in-page">
         <div id="container-inside">
           <div id="circle-small"></div>
@@ -41,7 +40,7 @@ export default function Login({ signin, setSignin }) {
                 </div>
               </div>
             </div>
-            {signin ? <SignIn setSignin={setSignin}/> : <SignUp setSignin={setSignin}/>}
+            {signin ? <SignIn setSignin={setSignin} /> : <SignUp setSignin={setSignin} />}
           </div>
         </div>
       </section>

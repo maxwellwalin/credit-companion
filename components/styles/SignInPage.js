@@ -1,21 +1,16 @@
 import styled from "styled-components";
 
 const SignInPage = styled.section`
-  background-color: #f5f5f5;
   .sign-in-detail {
     color: #fff;
-    padding: 6.25rem;
-    height: 100vh;
   }
   .sign-in-page {
-    height: 100vh;
-    background: #50b5ff;
     background: #50b5ff;
     background: linear-gradient(135deg, #50b5ff 0, #0076e5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba($primary, 80)', endColorstr='#0076e5', GradientType=1);
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    min-height: 83vh;
     width: 100%;
     margin: 0 auto;
     padding: 0 auto;
@@ -174,6 +169,8 @@ const SignInPage = styled.section`
       left: 0;
       right: 0;
       bottom: 0;
+      display: flex;
+      align-items: center;
     }
     @media (min-width: 576px) {
       div.container {

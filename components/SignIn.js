@@ -1,5 +1,6 @@
 import { SignInPage } from "./styles/SignInPage";
 import styled from "styled-components";
+import { Button } from "@mui/material";
 
 export const NonLink = styled.a`
   color: #50b5ff;
@@ -12,7 +13,7 @@ export default function SignIn({ setSignin }) {
     setSignin(false);
   };
   return (
-    <div class="col-md-6 bg-white pt-5 pt-5 pb-lg-0 pb-5">
+    <div class="col-md-6 bg-white pt-5 pb-lg-0 pb-5">
       <div class="sign-in-from">
         <h1 class="mb-0">Sign in</h1>
         <p>Enter your email address and password to access admin panel.</p>
@@ -59,7 +60,7 @@ export default function SignIn({ setSignin }) {
           </div>
           <div class="sign-info">
             <span class="dark-color d-inline-block line-height-2">
-              Don't have an account? <NonLink onClick={handleSignup}>Sign up</NonLink>
+              Don't have an account? <Button onClick={handleSignup}>Sign up</Button>
             </span>
             <ul class="iq-social-media">
               <li>
