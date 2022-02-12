@@ -1,4 +1,4 @@
-import { NonLink } from "./signIn";
+import { Box, Button, Checkbox } from "@mui/material";
 
 export default function SignUp({setSignin}) {
   const handleSignIn = () => {
@@ -43,25 +43,20 @@ export default function SignUp({setSignin}) {
               placeholder="Password"
             />
           </div>
-          <div className="d-inline-block w-100">
-            <div className="form-check d-inline-block mt-2 pt-1">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="customCheck1"
-                style={{ cursor: "pointer" }}
-              />
+          <Box display={'flex'} justifyContent='space-between'>
+            <Box display={'flex'} alignItems='center'>
+              <Checkbox />
               <label className="form-check-label" htmlFor="customCheck1">
                 I accept <a href="#">Terms and Conditions</a>
               </label>
-            </div>
-            <button type="submit" className="btn btn-primary float-end">
+            </Box>
+            <Button type="submit">
               Sign Up
-            </button>
-          </div>
+            </Button>
+          </Box>
           <div className="sign-info">
             <span className="d-inline-block">
-              Already Have Account ? <NonLink onClick={handleSignIn}>Log In</NonLink>
+              Already Have An Account?<Button onClick={handleSignIn}>Log In</Button>
             </span>
             <ul className="iq-social-media">
               <li>
