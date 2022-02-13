@@ -1,5 +1,7 @@
 import { SignInPage } from "./styles/SignInPage";
 import styled from "styled-components";
+import { Box, Button, Checkbox, Typography } from "@mui/material";
+
 
 export const NonLink = styled.a`
   color: #50b5ff;
@@ -12,9 +14,9 @@ export default function SignIn({ setSignin }) {
     setSignin(false);
   };
   return (
-    <div class="col-md-6 bg-white pt-5 pt-5 pb-lg-0 pb-5">
+    <div class="col-md-6 bg-white pt-5 pb-lg-0 pb-5">
       <div class="sign-in-from">
-        <h1 class="mb-0">Sign in</h1>
+        <h1 class="mb-0">Sign In</h1>
         <p>Enter your email address and password to access admin panel.</p>
         <form class="mt-4">
           <div class="form-group">
@@ -42,24 +44,20 @@ export default function SignIn({ setSignin }) {
               placeholder="Password"
             />
           </div>
-          <div class="d-inline-block w-100">
-            <div class="form-check d-inline-block mt-2 pt-1">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="customCheck11"
-              />
+          <Box display={'flex'} justifyContent='space-between'>
+            <Box display={'flex'} alignItems='center'>
+            <Checkbox />
               <label class="form-check-label" for="customCheck11">
                 Remember Me
               </label>
-            </div>
-            <button type="submit" class="btn btn-primary float-end">
-              Sign in
-            </button>
-          </div>
-          <div class="sign-info">
-            <span class="dark-color d-inline-block line-height-2">
-              Don't have an account? <NonLink onClick={handleSignup}>Sign up</NonLink>
+            </Box>
+            <Button type="submit">
+              Sign In
+            </Button>
+          </Box>
+          <Box class="sign-info">
+            <span class="d-inline-block">
+              Don't Have An Account?<Button onClick={handleSignup}>Sign up</Button>
             </span>
             <ul class="iq-social-media">
               <li>
@@ -78,7 +76,7 @@ export default function SignIn({ setSignin }) {
                 </a>
               </li>
             </ul>
-          </div>
+          </Box>
         </form>
       </div>
     </div>

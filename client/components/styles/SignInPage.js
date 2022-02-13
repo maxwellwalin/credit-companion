@@ -1,21 +1,16 @@
 import styled from "styled-components";
 
 const SignInPage = styled.section`
-  background-color: #f5f5f5;
   .sign-in-detail {
     color: #fff;
-    padding: 6.25rem;
-    height: 100vh;
   }
   .sign-in-page {
-    height: 100vh;
-    background: #50b5ff;
     background: #50b5ff;
     background: linear-gradient(135deg, #50b5ff 0, #0076e5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba($primary, 80)', endColorstr='#0076e5', GradientType=1);
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    min-height: 83vh;
     width: 100%;
     margin: 0 auto;
     padding: 0 auto;
@@ -174,6 +169,8 @@ const SignInPage = styled.section`
       left: 0;
       right: 0;
       bottom: 0;
+      display: flex;
+      align-items: center;
     }
     @media (min-width: 576px) {
       div.container {
@@ -233,6 +230,7 @@ const SignInPage = styled.section`
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: 50%;
+    padding-right: 5%;
   }
   .text-center {
     text-align: center !important;
@@ -248,7 +246,7 @@ const SignInPage = styled.section`
     width: 100%;
   }
   .sign-in-logo img {
-    height: 3.125rem;
+    height: 10.125rem;
   }
   @media (max-width: 991.98px) {
     .sign-in-page {
@@ -283,6 +281,7 @@ const SignInPage = styled.section`
   }
   .mb-4 {
     margin-bottom: 1.875rem !important;
+    border-radius: 10px;
   }
   .mb-1 {
     margin-bottom: 0.3125rem !important;
@@ -466,6 +465,7 @@ const SignInPage = styled.section`
   float: right !important;
 }
 .sign-info {
+  font-size: 14px;
   border-top: 1px solid #f1f1f1;
   margin-top: 1.875rem;
   padding-top: 1.25rem;

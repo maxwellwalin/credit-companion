@@ -4,9 +4,8 @@ import SignUp from "./SignUp";
 import { SignInPage } from "./styles/SignInPage";
 
 export default function Login({ signin, setSignin }) {
-  
   return (
-    <SignInPage className="wrapper">
+    <SignInPage>
       <section className="sign-in-page">
         <div id="container-inside">
           <div id="circle-small"></div>
@@ -21,7 +20,7 @@ export default function Login({ signin, setSignin }) {
               <div className="sign-in-detail text-white">
                 <a className="sign-in-logo mb-5" href="#">
                   <img
-                    src="https://via.placeholder.com/215x50?text=Logo"
+                    src="https://res.cloudinary.com/dtpgzynwd/image/upload/v1644778478/credit-companion/Credit_Companion_Logo_dkautr.png"
                     className="img-fluid"
                     alt="logo"
                   />
@@ -30,7 +29,7 @@ export default function Login({ signin, setSignin }) {
                   <ul className="list-inline m-0 p-0 ">
                     <li>
                       <img
-                        src="https://via.placeholder.com/292x157?text=Random+Image"
+                        src="https://res.cloudinary.com/dtpgzynwd/image/upload/v1644782184/credit-companion/291627674-huge_lzrkgv.jpg"
                         className="img-fluid mb-4"
                         alt="logo"
                       />
@@ -41,7 +40,7 @@ export default function Login({ signin, setSignin }) {
                 </div>
               </div>
             </div>
-            {signin ? <SignIn setSignin={setSignin}/> : <SignUp setSignin={setSignin}/>}
+            {signin ? <SignIn setSignin={setSignin} /> : <SignUp setSignin={setSignin} />}
           </div>
         </div>
       </section>
