@@ -245,7 +245,7 @@ const SignInPage = styled.section`
     width: 100%;
   }
   .sign-in-logo img {
-    height: 3.125rem;
+    height: 10.125rem;
   }
   @media (max-width: 991.98px) {
     .sign-in-page {
