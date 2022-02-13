@@ -29,7 +29,7 @@ export default function Login({ signin, setSignin }) {
                   <ul className="list-inline m-0 p-0 ">
                     <li>
                       <img
-                        src="https://via.placeholder.com/292x157?text=Random+Image"
+                        src="https://res.cloudinary.com/dtpgzynwd/image/upload/v1644782184/credit-companion/291627674-huge_lzrkgv.jpg"
                         className="img-fluid mb-4"
                         alt="logo"
                       />

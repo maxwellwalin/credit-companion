@@ -230,6 +230,7 @@ const SignInPage = styled.section`
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: 50%;
+    padding-right: 5%;
   }
   .text-center {
     text-align: center !important;
@@ -280,6 +281,7 @@ const SignInPage = styled.section`
   }
   .mb-4 {
     margin-bottom: 1.875rem !important;
+    border-radius: 10px;
   }
   .mb-1 {
     margin-bottom: 0.3125rem !important;
