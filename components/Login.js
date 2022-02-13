@@ -20,7 +20,7 @@ export default function Login({ signin, setSignin }) {
               <div className="sign-in-detail text-white">
                 <a className="sign-in-logo mb-5" href="#">
                   <img
-                    src="https://via.placeholder.com/215x50?text=Logo"
+                    src="https://res.cloudinary.com/dtpgzynwd/image/upload/v1644778478/credit-companion/Credit_Companion_Logo_dkautr.png"
                     className="img-fluid"
                     alt="logo"
                   />
