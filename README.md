@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/maxwellwalin/credit-companion">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://res.cloudinary.com/dtpgzynwd/image/upload/v1644778478/credit-companion/Credit_Companion_Logo_dkautr.png" alt="Logo" width="200" height="100">
   </a>
 
 <h3 align="center">Credit Companion</h3>
