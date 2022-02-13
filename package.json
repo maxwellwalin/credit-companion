@@ -1,29 +1,19 @@
 {
-  "name": "nextjs",
-  "version": "5.0.0",
-  "private": true,
+  "name": "credit-companion",
+  "version": "1.0.0",
+  "description": "Credit Repair Website",
+  "main": "server/server.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   },
-  "dependencies": {
-    "@emotion/cache": "latest",
-    "@emotion/react": "latest",
-    "@emotion/server": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "next": "latest",
-    "prop-types": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "styled-components": "^5.3.3"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "concurrently": "^5.1.0"
   }
 }
