@@ -350,6 +350,7 @@ const SignInPage = styled.section`
     margin-bottom: 0;
     vertical-align: top;
     line-height: 1.375rem;
+    font-size: .9rem;
   }
   .form-check .form-check-input {
     float: left;

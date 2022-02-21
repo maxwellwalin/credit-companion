@@ -1,7 +1,5 @@
-import { SignInPage } from "./styles/SignInPage";
 import styled from "styled-components";
-import { Box, Button, Checkbox, Typography } from "@mui/material";
-
+import { Box, Button, Checkbox } from "@mui/material";
 
 export const NonLink = styled.a`
   color: #50b5ff;
@@ -10,9 +8,11 @@ export const NonLink = styled.a`
 `;
 
 export default function SignIn({ setSignin }) {
+
   const handleSignup = () => {
     setSignin(false);
   };
+
   return (
     <div class="col-md-6 bg-white pt-5 pb-lg-0 pb-5">
       <div class="sign-in-from">
@@ -46,7 +46,7 @@ export default function SignIn({ setSignin }) {
           </div>
           <Box display={'flex'} justifyContent='space-between'>
             <Box display={'flex'} alignItems='center'>
-            <Checkbox />
+              <Checkbox />
               <label class="form-check-label" for="customCheck11">
                 Remember Me
               </label>

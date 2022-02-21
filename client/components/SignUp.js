@@ -1,7 +1,5 @@
 import useForm from "../lib/useForm";
 import gql from "graphql-tag";
-import Error from "./ErrorMessage";
-import { NonLink } from "./signIn";
 import { useMutation } from "@apollo/client";
 import { Box, Button, Checkbox } from "@mui/material";
 
@@ -51,14 +49,14 @@ export default function SignUp({ setSignin }) {
         <form className="mt-4" method="POST" onSubmit={handleSubmit}>
           <div className="form-group">
             <label className="form-label" htmlFor="exampleInputEmail1">
-              Your Full Name
+              Full Name
             </label>
             <input
               type="text"
               name="name"
               className="form-control mb-0"
               id="exampleInputEmail1"
-              placeholder="Your Full Name"
+              placeholder="Enter full name"
               value={inputs.name}
               onChange={handleChange}
             />
@@ -86,7 +84,7 @@ export default function SignUp({ setSignin }) {
               name="password"
               className="form-control mb-0"
               id="exampleInputPassword1"
-              placeholder="Password"
+              placeholder="Create password"
               value={inputs.password}
               onChange={handleChange}
             />
