@@ -3,17 +3,12 @@ import Link from "./Link";
 
 export default function Header() {
     return (
-        <Box
-            component="header"
-            display={'flex'}
-            justifyContent='center'
-            boxShadow="1px 0.3px 3px"
-            px={2}>
+        <Container component="header" maxWidth='lg'>
             <Box
                 py={3}
+                mb={5}
                 display="flex"
-                justifyContent="space-between"
-                width={'1536px'}>
+                justifyContent="space-between">
                 <Typography component={Link} href="/" sx={{ textDecoration: 'none' }}>
                     <Typography variant='h4' component='h1' sx={{ fontWeight: 'bold' }}>
                         Credit Companion
@@ -36,6 +31,6 @@ export default function Header() {
                     </Button>
                 </Box>
             </Box>
-        </Box>
+        </Container>
     );
 }
