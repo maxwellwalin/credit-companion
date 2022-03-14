@@ -3,6 +3,7 @@ import { Box, Button, Checkbox } from "@mui/material";
 import useForm from "../lib/useForm";
 import gql from "graphql-tag";
 import { useMutation } from "@apollo/client";
+import auth from "../lib/auth";
 
 export const NonLink = styled.a`
   color: #50b5ff;
@@ -31,8 +32,13 @@ export default function SignIn({ setSignin }) {
   });
   async function handleSubmit(e) {
     e.preventDefault(); // stop the form from submitting
-    const res = await signin().catch(console.error);
-    resetForm();
+    try{
+      const user = await signin()
+      auth.login(user?.data?.login?.token);
+      resetForm();
+    } catch (err) {
+      console.log(err)
+    }
   }
   const handleSignIn = () => {
     setSignin(false);
