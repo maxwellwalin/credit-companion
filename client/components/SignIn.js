@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { Box, Button, Checkbox } from "@mui/material";
+import useForm from "../lib/useForm";
+import gql from "graphql-tag";
+import { useMutation } from "@apollo/client";
+import auth from "../lib/auth";
 
 export const NonLink = styled.a`
   color: #50b5ff;
@@ -7,9 +11,36 @@ export const NonLink = styled.a`
   cursor: pointer;
 `;
 
-export default function SignIn({ setSignin }) {
+const SIGNIN_MUTATION = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      user {
+        name
+      }
+    }
+  }
+`;
 
-  const handleSignup = () => {
+export default function SignIn({ setSignin }) {
+  const { inputs, handleChange, resetForm } = useForm({
+    email: "",
+    password: "",
+  });
+  const [signin, { data, loading, error }] = useMutation(SIGNIN_MUTATION, {
+    variables: inputs,
+  });
+  async function handleSubmit(e) {
+    e.preventDefault(); // stop the form from submitting
+    try {
+      const user = await signin()
+      auth.login(user?.data?.login?.token);
+      resetForm();
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  const handleSignIn = () => {
     setSignin(false);
   };
 
@@ -18,16 +49,19 @@ export default function SignIn({ setSignin }) {
       <div class="sign-in-from">
         <h1 class="mb-0">Sign In</h1>
         <p>Enter your email address and password to access admin panel.</p>
-        <form class="mt-4">
+        <form class="mt-4" method="POST" onSubmit={ handleSubmit }>
           <div class="form-group">
             <label class="form-label" for="exampleInputEmail1">
               Email address
             </label>
             <input
               type="email"
+              name="email"
               class="form-control mb-0"
               id="exampleInputEmail1"
               placeholder="Enter email"
+              value={ inputs.email }
+              onChange={ handleChange }
             />
           </div>
           <div class="form-group">
@@ -39,25 +73,27 @@ export default function SignIn({ setSignin }) {
             </a>
             <input
               type="password"
+              name="password"
               class="form-control mb-0"
               id="exampleInputPassword1"
               placeholder="Password"
+              value={ inputs.password }
+              onChange={ handleChange }
             />
           </div>
-          <Box display={ 'flex' } justifyContent='space-between'>
-            <Box display={ 'flex' } alignItems='center'>
+          <Box display={ "flex" } justifyContent="space-between">
+            <Box display={ "flex" } alignItems="center">
               <Checkbox />
               <label class="form-check-label" for="customCheck11">
                 Remember Me
               </label>
             </Box>
-            <Button type="submit">
-              Sign In
-            </Button>
+            <Button type="submit">Sign In</Button>
           </Box>
           <Box class="sign-info">
             <span class="d-inline-block">
-              Don't Have An Account?<Button onClick={ handleSignup }>Sign up</Button>
+              Don't Have An Account?
+              <Button onClick={ handleSignIn }>Sign up</Button>
             </span>
             <ul class="iq-social-media">
               <li>
