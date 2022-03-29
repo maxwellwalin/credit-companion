@@ -5,12 +5,12 @@ export default function Footer() {
     return (
         <Box
             component="footer"
-            sx={{
+            sx={ {
                 py: 3,
                 px: 2,
                 mt: 'auto',
                 backgroundColor: (theme) => theme.palette.grey[200]
-            }}
+            } }
         >
             <Container maxWidth="sm">
                 <Copyright />

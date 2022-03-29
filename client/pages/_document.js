@@ -9,15 +9,15 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          {/* PWA primary color */ }
+          <meta name="theme-color" content={ theme.palette.primary.main } />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-          {/* Inject MUI styles first to match with the prepend: true configuration. */}
-          {this.props.emotionStyleTags}
+          {/* Inject MUI styles first to match with the prepend: true configuration. */ }
+          { this.props.emotionStyleTags }
         </Head>
         <body>
           <Main />
@@ -64,7 +64,7 @@ MyDocument.getInitialProps = async (ctx) => {
     originalRenderPage({
       enhanceApp: (App) =>
         function EnhanceApp(props) {
-          return <App emotionCache={cache} {...props} />;
+          return <App emotionCache={ cache } { ...props } />;
         },
     });
 
@@ -74,10 +74,10 @@ MyDocument.getInitialProps = async (ctx) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(' ')}`}
-      key={style.key}
+      data-emotion={ `${style.key} ${style.ids.join(' ')}` }
+      key={ style.key }
       // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{ __html: style.css }}
+      dangerouslySetInnerHTML={ { __html: style.css } }
     />
   ));
 

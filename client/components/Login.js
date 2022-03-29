@@ -39,7 +39,7 @@ export default function Login({ signin, setSignin }) {
                 </div>
               </div>
             </div>
-            {signin ? <SignIn setSignin={setSignin} /> : <SignUp setSignin={setSignin} />}
+            { signin ? <SignIn setSignin={ setSignin } /> : <SignUp setSignin={ setSignin } /> }
           </div>
         </div>
       </section>

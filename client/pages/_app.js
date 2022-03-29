@@ -16,18 +16,18 @@ const clientSideEmotionCache = createEmotionCache();
 function MyApp({ Component, pageProps, apollo, emotionCache = clientSideEmotionCache }) {
 
   return (
-    <ApolloProvider client={apollo}>
-      <CacheProvider value={emotionCache}>
+    <ApolloProvider client={ apollo }>
+      <CacheProvider value={ emotionCache }>
         <Head>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1"
           />
         </Head>
-        <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <ThemeProvider theme={ theme }>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */ }
           <CssBaseline />
-          <Component {...pageProps} />
+          <Component { ...pageProps } />
         </ThemeProvider>
       </CacheProvider>
     </ApolloProvider>

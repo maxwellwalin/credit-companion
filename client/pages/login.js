@@ -7,13 +7,13 @@ import Header from "../src/Header";
 export default function login() {
   const [signin, setSignin] = useState(false);
   return (
-    <Box sx={{
+    <Box sx={ {
       display: 'flex',
       flexDirection: 'column',
       minHeight: '100vh',
-    }}>
+    } }>
       <Header />
-      <Login setSignin={setSignin} signin={signin} />
+      <Login setSignin={ setSignin } signin={ signin } />
       <Footer />
     </Box>
   );

@@ -7,14 +7,14 @@ import Footer from '../src/Footer';
 
 export default function Quiz() {
   return (
-    <Box sx={{
+    <Box sx={ {
       display: 'flex',
       flexDirection: 'column',
       minHeight: '100vh',
-    }}>
+    } }>
       <Header />
       <Container component="main">
-        <Box my={4}>
+        <Box my={ 4 }>
           <Typography variant="h4" component="h2" gutterBottom align='center'>
             Credit Quiz
           </Typography>

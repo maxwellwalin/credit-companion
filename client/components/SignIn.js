@@ -44,8 +44,8 @@ export default function SignIn({ setSignin }) {
               placeholder="Password"
             />
           </div>
-          <Box display={'flex'} justifyContent='space-between'>
-            <Box display={'flex'} alignItems='center'>
+          <Box display={ 'flex' } justifyContent='space-between'>
+            <Box display={ 'flex' } alignItems='center'>
               <Checkbox />
               <label class="form-check-label" for="customCheck11">
                 Remember Me
@@ -57,7 +57,7 @@ export default function SignIn({ setSignin }) {
           </Box>
           <Box class="sign-info">
             <span class="d-inline-block">
-              Don't Have An Account?<Button onClick={handleSignup}>Sign up</Button>
+              Don't Have An Account?<Button onClick={ handleSignup }>Sign up</Button>
             </span>
             <ul class="iq-social-media">
               <li>

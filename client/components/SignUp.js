@@ -46,7 +46,7 @@ export default function SignUp({ setSignin }) {
       <div className="sign-in-from">
         <h1 className="mb-0">Sign Up</h1>
         <p>Enter your email address and password to access admin panel.</p>
-        <form className="mt-4" method="POST" onSubmit={handleSubmit}>
+        <form className="mt-4" method="POST" onSubmit={ handleSubmit }>
           <div className="form-group">
             <label className="form-label" htmlFor="exampleInputEmail1">
               Full Name
@@ -57,8 +57,8 @@ export default function SignUp({ setSignin }) {
               className="form-control mb-0"
               id="exampleInputEmail1"
               placeholder="Enter full name"
-              value={inputs.name}
-              onChange={handleChange}
+              value={ inputs.name }
+              onChange={ handleChange }
             />
           </div>
           <div className="form-group">
@@ -71,8 +71,8 @@ export default function SignUp({ setSignin }) {
               className="form-control mb-0"
               id="exampleInputEmail2"
               placeholder="Enter email"
-              value={inputs.email}
-              onChange={handleChange}
+              value={ inputs.email }
+              onChange={ handleChange }
             />
           </div>
           <div className="form-group">
@@ -85,12 +85,12 @@ export default function SignUp({ setSignin }) {
               className="form-control mb-0"
               id="exampleInputPassword1"
               placeholder="Create password"
-              value={inputs.password}
-              onChange={handleChange}
+              value={ inputs.password }
+              onChange={ handleChange }
             />
           </div>
-          <Box display={'flex'} justifyContent='space-between'>
-            <Box display={'flex'} alignItems='center'>
+          <Box display={ 'flex' } justifyContent='space-between'>
+            <Box display={ 'flex' } alignItems='center'>
               <Checkbox />
               <label className="form-check-label" htmlFor="customCheck1">
                 I accept <a href="#">Terms and Conditions</a>
@@ -102,7 +102,7 @@ export default function SignUp({ setSignin }) {
           </Box>
           <div className="sign-info">
             <span className="d-inline-block">
-              Already Have An Account?<Button onClick={handleSignIn}>Log In</Button>
+              Already Have An Account?<Button onClick={ handleSignIn }>Log In</Button>
             </span>
             <ul className="iq-social-media">
               <li>
