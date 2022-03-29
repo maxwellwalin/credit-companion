@@ -35,7 +35,7 @@ export default function SignUp({ setSignin }) {
 
   async function handleSubmit(e) {
     e.preventDefault(); // stop the form from submitting
-    try{
+    try {
       const user = await signup();
       auth.login(user?.data?.addUser?.token);
       resetForm();
